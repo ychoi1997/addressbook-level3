@@ -40,6 +40,12 @@ public abstract class Command {
      * Executes the command and returns the result.
      */
     public abstract CommandResult execute();
+    
+    /**
+     * This method will return whether a method will mutate the data, e.g. AddCommand
+     * @return true if the data is mutated by a method
+     */
+    public abstract boolean isMutating();
 
     /**
      * Supplies the data the command will operate on.
